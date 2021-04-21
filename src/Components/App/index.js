@@ -1,10 +1,19 @@
-import React from 'react';
+import React,{useState} from 'react';
+import styled from 'styled-components'
+
+import Navigation from '../Navigation'
+import Home from '../Home'
 
 
 
 const App =()=>{
+    const [show,setShow] = useState(false)
+
     return(
-        <h1>This is the app</h1>
+        <div>
+            <Navigation setShow={setShow}/>
+            <Home show={show} setShow={setShow}/>
+        </div>
     )
 }
 
