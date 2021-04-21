@@ -22,9 +22,6 @@ const IconContainer = styled.div`
     cursor:pointer;
 `
 
-
-
-
 const Navigation =({setShow})=>{
 
     return(
