@@ -1,7 +1,8 @@
-import React,{useRef} from 'react';
+import React,{useRef,useEffect } from 'react';
 import styled from 'styled-components';
 import CloseIcon from '@material-ui/icons/Close';
-import { useEffect } from 'react';
+
+import Post from '../Post'
 
 const Container = styled.div`
     display:${({state})=>state ? 'block': 'none'};
@@ -10,6 +11,7 @@ const Container = styled.div`
     height:100vh;
     width:100vw;
     top:0;
+    z-index:99999999;
 `
 
 const SubContainer = styled.div`
@@ -25,8 +27,8 @@ const SubContainer = styled.div`
 `
 const IconContainer = styled.div`
     position:absolute;
-    top:10px;
-    right:10px;
+    top:0px;
+    right:0px;
     cursor:pointer;
 `
 
@@ -55,7 +57,7 @@ const Modal =({show,setShow})=>{
                 <IconContainer>
                     <CloseIcon style={{fontSize:'40px'}} onClick={()=>{setShow(false)}}/>
                 </IconContainer>
-
+                <Post/>
             </SubContainer>
         </Container>
     )

@@ -5,7 +5,6 @@ import CameraAltIcon from '@material-ui/icons/CameraAlt';
 
 const Container = styled.nav`
     height:72px;
-    border-bottom: 2px solid #845ec2;
     display:flex;
     align-items:center;
     justify-content:space-around;
@@ -20,6 +19,7 @@ const IconContainer = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
+    cursor:pointer;
 `
 
 
